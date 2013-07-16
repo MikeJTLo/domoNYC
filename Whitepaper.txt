@@ -1,4 +1,3 @@
-Test1
 ** Code name: domoNYC
 ** Language to use: Python
 ** Inception date: July 15, 2013
