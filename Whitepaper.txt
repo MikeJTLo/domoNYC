@@ -1,0 +1,42 @@
+** Code name: domoNYC
+** Language to use: Python
+** Inception date: July 15, 2013
+
+** Purpose: This is a white paper defining software that displays tweets using color and geolocation for a uniquely visual view
+** of people's tweets in specific locations. For example, after the 2012 Presidential election, searching for 'Obama' should
+** display a smattering of tweets across the nation where Obama has won to have positive words such as 'happy' to be dense
+** while places where Romney was the favorite to have words such as 'sad' to be dense. Coloring each word green, and red, respectively
+** would provide a geospatial colored view of the state of the nation (green = happy, red = sad).
+
+** Use Cases:
+* Use Case One: I'd like to see all tweets within a specific location (visually) with key words highlighted using specific colors (happy = green, sad = red)
+* Use Case Two: I'd like to see the trending topics for a nation with key words highlighted using specific colors (happy = green, sad = red)
+-- This might not be a good use case as trending topics are generally pretty shitty (eg bieberfever, hiphop, angry, etc.)
+
+* Use Case Three (Tweet Mood Use Case): Visually placing tweets based on their location would be a better display of trending (not 'topics' but,) moods in specific areas
+This provides a better view of a global pulse. 
+-- We need to be able to search for specific keywords when populating the map, otherwise the range of data being placed onto 
+the map becomes incoherent.
+-- Use Case 3: I'd like to see the trending mood for Obama after the 2012 Presidential Election for each location in a visually stimulating map.
+Solution: Display global map, provide search box, populate map with twitter feed results after search box is populated with 'Obama' where tweets are then:
+   	1. highlighted based on mood (eg happy = green, sad = red; dictionary of word/color pairs required).
+   	2. geolocation placed accordingly
+   		
+* Use Case 4 (Tweet Count Use Case): I'd like to see the number of tweets for a specific topic based on location - visual will be very different here.
+Visual should be 'statistics view' with dots indicating per 10,000 tweets in the last hour or something - this will provide a 
+'trending' indicator based on location, which is more specific then the trending topic.
+
+
+** Functional Requirements:
+1. Map API (Google Maps, MAP, etc.?) - has to be zoomable and will fire various GET commands to the twitter API depending on the zoom level.
+1b. Map API then has to redraw unique divisions to place resulting text in.
+1c. Text also has to be processed and highlighted according to a data dictionary (word/color pairs).
+
+2. Twitter API (search, and get resulting tweets with geolocations)
+2b. Search decisions - are search terms searched as Hashtags or text content?
+2c. Search distinctions: https://dev.twitter.com/docs/using-search
+2d. How advanced does the search capability have to be, or should be? I think it should stay simple
+2e. PROPOSAL: Search terms are searched as plain text, and hashtags can be searched by adding a hashtag to the search query
+
+3. A good way to display text in non-traditional spaces (e.g. country shaped divs, city shaped divs, etc.)
+3b. How much text should fit at each zoom-level? What size should the text be? How should each tweet be delimited?
