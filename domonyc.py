@@ -10,5 +10,5 @@ app = Flask(__name__)
 def hello():
     return 'Let\'s see how long you have lived in days, minutes and seconds.<br /><iframe width=\'500\' height=\'300\' frameBorder=\'0\' src=\'http://a.tiles.mapbox.com/v3/michaeljlo.map-wlxizy2a.html#4/40.03918647233613/-96.61869964833944\'></iframe>'
 
-if __name__ == '__main__';
+if __name__ == '__main__':
 	app.run(debug=False)
