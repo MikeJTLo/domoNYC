@@ -18,7 +18,7 @@ def hello():
     return 'Let\'s see how long you have lived in days, minutes and seconds.<br /><iframe width=\'500\' height=\'300\' frameBorder=\'0\' src=\'http://a.tiles.mapbox.com/v3/michaeljlo.map-wlxizy2a.html#4/40.03918647233613/-96.61869964833944\'></iframe>'
 
 @app.route('/map')
-def hello():
+def map():
     return '<iframe width=\'500\' height=\'300\' frameBorder=\'0\' src=\'http://a.tiles.mapbox.com/v3/michaeljlo.map-wlxizy2a.html#4/40.03918647233613/-96.61869964833944\'></iframe>'
 
 
