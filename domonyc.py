@@ -1,8 +1,8 @@
 import os
 from flask import Flask
-from jinja2 import Environment, PackageLoader
+#from jinja2 import Environment, PackageLoader
 
-env = Environment(loader=PackageLoader('domoNYC','templates'))
+#env = Environment(loader=PackageLoader('domoNYC','templates'))
 
 app = Flask(__name__)
 
