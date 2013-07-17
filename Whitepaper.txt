@@ -1,3 +1,4 @@
+Michael Lo © 2013, All Rights Reserved 
 ** Code name: domoNYC
 ** Language to use: Python
 ** Inception date: July 15, 2013
